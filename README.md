@@ -1,7 +1,8 @@
 # vue-todolist
 
 ```
-vuejs 3 를 이용한 투두리스트 프로젝트
+vuejs 3 를 이용하여 todolist 기능 만들기 예제
+
 ```
 
 This template should help get you started developing with Vue 3 in Vite.
