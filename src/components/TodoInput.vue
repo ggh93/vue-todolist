@@ -1,7 +1,7 @@
 <template>
   <div>
     <input v-model="newTodo" placeholder="Add a new todo" @keyup.enter="submitTodo" />
-    <button @click="submitTodo">Add</button>
+    <button @click="submitTodo()">Add</button>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     submitTodo() {
-      if (tihs.newTodo.trim() !== '') {
+      if (this.newTodo.trim() !== '') {
         this.$emit('add-todo', this.newTodo)
         this.newTodo = ''
       }
@@ -23,4 +23,4 @@ export default {
 }
 </script>
 
-<style lang="scss"></style
+<style lang="scss"></style>
