@@ -1,22 +1,16 @@
 # vue-todolist
 
+## 차후 기능 추가 예정
+
+- 할 일 완료 표시 기능
+- 수정 기능
+- 디자인 개선(Bootstrap, Tailwind CSS)
+- 애니메이션 추가?
+- DB연동 데이터 바인딩
+
 ```
 vuejs 3 를 이용하여 todolist 기능 만들기 예제
 ```
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
