@@ -1,24 +1,37 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div id="app">
+    <h1>Todo List</h1>
+    <TodoInputVue @add-todo="addTodo" />
+    <TodoListVue :todos="todos" @delete-todo="deleteDoto" />
+    <!-- <todo-input @add-todo="addTodo"></todo-input>
+    <todo-list :todos="todos" @delete-todo="deleteDoto"></todo-list> -->
+  </div>
 </template>
+
+<script>
+import TodoInput from './components/TodoInpu'
+import TodoList from './components/TodoList.vue'
+
+export default {
+  components: {
+    TodoInputVue,
+    TodoListVue
+  },
+  data() {
+    return {
+      todos: []
+    }
+  },
+  methods: {
+    addTodo(todo) {
+      this.todos.push(todo)
+    },
+    deleteTodo(index) {
+      this.todos.splice(index, 1)
+    }
+  }
+}
+</script>
 
 <style scoped>
 header {
