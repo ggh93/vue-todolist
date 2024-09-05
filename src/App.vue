@@ -2,12 +2,16 @@
   <div id="app">
     <h1>Todo List</h1>
     <todo-input @add-todo="addTodo"></todo-input>
-    <todo-list :todos="todos" @delete-todo="deleteTodo"></todo-list>
+    <todo-list
+      :todos="todos"
+      @delete-todo="deleteTodo"
+      @edit-todo="editTodo"
+      @close-edit="closeEdit"
+    ></todo-list>
   </div>
 </template>
 
 <script>
-// 주석 제거 및 올바른 경로 확인
 import TodoInput from './components/TodoInput.vue'
 import TodoList from './components/TodoList.vue'
 
@@ -23,10 +27,14 @@ export default {
   },
   methods: {
     addTodo(todo) {
-      this.todos.push(todo)
+      this.todos.push({ text: todo, completed: false, isEditing: false })
     },
     deleteTodo(index) {
       this.todos.splice(index, 1)
+    },
+    editTodo({ index, newText }) {
+      this.todos[index].text = newText
+      // this.todos[index].isEditing = false
     }
   }
 }
