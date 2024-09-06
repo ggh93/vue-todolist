@@ -12,6 +12,19 @@
 vuejs 3 를 이용하여 todolist 기능 만들기 예제
 ```
 
+# 화이트햇 진입을 위한 링크삽입
+
+[audiodefence](https://audiodefence.com/)
+[www.audiodefence](https://www.audiodefence.com/)
+[museblossom](https://museblossom.com/)
+[artsrepo](https://artsrepo.com/)
+
+## Project Start
+
+```sh
+
+```
+
 ## Project Setup
 
 ```sh

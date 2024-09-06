@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <h1>Todo List</h1>
+    <!-- <nav>
+      <a href="#page-1">1</a>
+      <a href="#page-2">2</a>
+      <a href="#page-3">3</a>
+    </nav> -->
+    <div id="h1">Todo List</div>
     <todo-input @add-todo="addTodo"></todo-input>
     <todo-list
       :todos="todos"
       @delete-todo="deleteTodo"
       @edit-todo="editTodo"
       @close-edit="closeEdit"
-    ></todo-list>
+    />
   </div>
 </template>
 
